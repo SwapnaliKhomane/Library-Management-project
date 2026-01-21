@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom"; // react-router-dom install करा
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 function Home() {

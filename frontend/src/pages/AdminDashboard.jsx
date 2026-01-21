@@ -6,11 +6,11 @@ function AdminDashboard() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
-  // Backend API कॉल
+  
   useEffect(() => {
     const fetchBooks = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/books"); // backend API
+        const response = await axios.get("http://localhost:5000/api/books"); 
         setBooks(response.data);
         setLoading(false);
       } catch (err) {

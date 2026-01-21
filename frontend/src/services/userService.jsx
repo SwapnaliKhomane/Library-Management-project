@@ -1,9 +1,9 @@
-// src/services/userService.js
+
 import axios from "axios";
 
-const API_BASE_URL = "http://localhost:5000/api"; // backend URL
+const API_BASE_URL = "http://localhost:5000/api"; 
 
-// सर्व users fetch करणे
+
 export const getUsers = async () => {
   try {
     const response = await axios.get(`${API_BASE_URL}/users`);
@@ -14,7 +14,7 @@ export const getUsers = async () => {
   }
 };
 
-// single user fetch करणे
+
 export const getUserById = async (userId) => {
   try {
     const response = await axios.get(`${API_BASE_URL}/users/${userId}`);
@@ -25,18 +25,17 @@ export const getUserById = async (userId) => {
   }
 };
 
-// user create करणे
 export const createUser = async (userData) => {
   try {
     const response = await axios.post(`${API_BASE_URL}/users`, userData);
-    return response.data; // backend return object
+    return response.data; 
   } catch (error) {
     console.error("Error creating user:", error);
     throw error;
   }
 };
 
-// user update करणे
+
 export const updateUser = async (userId, userData) => {
   try {
     const response = await axios.put(`${API_BASE_URL}/users/${userId}`, userData);
@@ -47,7 +46,6 @@ export const updateUser = async (userId, userData) => {
   }
 };
 
-// user delete करणे
 export const deleteUser = async (userId) => {
   try {
     const response = await axios.delete(`${API_BASE_URL}/users/${userId}`);

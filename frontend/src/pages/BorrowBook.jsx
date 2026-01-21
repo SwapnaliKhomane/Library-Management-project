@@ -7,7 +7,7 @@ function BorrowBook() {
   const [borrowerName, setBorrowerName] = useState("");
   const [message, setMessage] = useState("");
 
-  // Backend वरून books fetch करणे
+
   useEffect(() => {
     const fetchBooks = async () => {
       try {
@@ -20,7 +20,7 @@ function BorrowBook() {
     fetchBooks();
   }, []);
 
-  // Borrow book submit function
+ 
   const handleBorrow = async (e) => {
     e.preventDefault();
     if (!selectedBook || !borrowerName) {
